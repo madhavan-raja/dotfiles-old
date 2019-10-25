@@ -45,9 +45,7 @@
  '(column-number-mode t)
  '(custom-enabled-themes (quote (manoj-dark)))
  '(display-line-numbers-type (quote relative))
- '(package-selected-packages (quote (gruvbox-theme dracula-theme evil)))
- '(show-paren-mode t)
- '(tool-bar-mode nil))
+ '(package-selected-packages (quote (gruvbox-theme dracula-theme evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

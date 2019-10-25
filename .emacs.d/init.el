@@ -1,5 +1,7 @@
 (setq inhibit-startup-screen t)
 
+(set-default frame-title-format '("Emacs"))
+
 (set-default 'cursor-type
 	     'hbar)
 

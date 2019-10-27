@@ -1,5 +1,4 @@
 (setq inhibit-startup-screen t)
-
 (setq-default frame-title-format '("%b - Emacs"))
 
 (set-default 'cursor-type
@@ -16,17 +15,11 @@
 		    :width 'normal)
 
 (column-number-mode 1)
-
 (show-paren-mode 1)
-
 (electric-pair-mode 1)
-
 (global-hl-line-mode 1)
-
 (global-display-line-numbers-mode 1)
-
 (fringe-mode 0)
-
 (toggle-frame-maximized)
 
 (setq indo-enable-flex-matching t)
@@ -68,3 +61,7 @@
 
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
+
+(add-to-list 'load-path "~/.emacs.d/packages")
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))

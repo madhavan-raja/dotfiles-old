@@ -20,10 +20,8 @@
 
 (ido-mode t)
 
-(load-theme 'wheatgrass)
-
 (set-face-attribute 'default nil
-                    :family "Source Code Pro"
+                    :family "Cascadia Code PL"
                     :height 150
                     :weight 'normal
                     :width 'normal)
@@ -39,5 +37,30 @@
 (setq package-enable-at-startup nil)
 (package-initialize)
 
+(add-to-list 'custom-theme-load-path "~/.emacs.d")
+
+(require 'gruvbox)
+(load-theme 'gruvbox-dark-hard t)
+
 (require 'evil)
 (evil-mode t)
+
+(require 'org-bullets)
+(add-hook 'org-mode-hook 'org-bullets-mode)
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("b89ae2d35d2e18e4286c8be8aaecb41022c1a306070f64a66fd114310ade88aa" "7f6d4aebcc44c264a64e714c3d9d1e903284305fd7e319e7cb73345a9994f5ef" default)))
+ '(inhibit-startup-screen t)
+ '(package-selected-packages (quote (nord-theme gruvbox-theme org-bullets evil))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

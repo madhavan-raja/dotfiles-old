@@ -3,8 +3,6 @@ set rnu
 
 syntax on
 
-set tabstop=4
-set shiftwidth=4
 set autoindent
 set smartindent
 set cindent
@@ -16,7 +14,7 @@ set lbr!
 
 set belloff=all
 colorscheme torte
-set guifont=Ubuntu_Mono:h16:cANSI:qDRAFT
+set guifont=Fira_Code:h14:cANSI:qDRAFT
 
 filetype plugin on
 

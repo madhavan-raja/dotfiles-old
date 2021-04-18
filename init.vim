@@ -12,7 +12,7 @@ call plug#begin(stdpath('data'))
 "{{ The Basics }}
     Plug 'gmarik/Vundle.vim'                           " Vundle
     Plug 'itchyny/lightline.vim'                       " Lightline statusbar
-    Plug 'suan/vim-instant-markdown', {'rtp': 'after'} " Markdown Preview
+"    Plug 'suan/vim-instant-markdown', {'rtp': 'after'} " Markdown Preview
     Plug 'frazrepo/vim-rainbow'
 "{{ File management }}
     Plug 'vifm/vifm.vim'                               " Vifm

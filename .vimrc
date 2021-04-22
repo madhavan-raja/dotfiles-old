@@ -7,7 +7,7 @@ set autoindent
 set smartindent
 set cindent
 
-set backspace = indent,eol,start
+set backspace = indent, eol, start
 
 set breakindent
 set lbr!

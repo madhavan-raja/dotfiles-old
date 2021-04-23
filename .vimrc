@@ -12,7 +12,7 @@ set backspace = indent, eol, start
 set breakindent
 set lbr!
 
-set belloff=all
+set belloff = all
 colorscheme torte
 set guifont=Fira_Code:h14:cANSI:qDRAFT
 

@@ -1,8 +1,4 @@
-;; POLYBAR CONFIG
-
 [colors]
-fg = #ffffff
-fgdis = #696969
 bgtime = #1e1e1e
 bgcoreinfo = #1e1e1e
 bgwlan = #b3c9af
@@ -11,42 +7,51 @@ bgi3f = #1e1e1e
 bgdis = #cec388
 bgtray = #2e2e2e
 alert = #f99157
-tp = #00000000
+tp = #2e2e2e
 
-[bar/mybar]
+bar_bg = #0f0f0f
+bar_fg_nf = #888888
+bar_fg_f = #FFFFFF
+
+[bar/main]
 width = 100%
-height = 25
+height = 38
 
-background = ${colors.tp}
-foreground = ${colors.fg}
+background = ${colors.bar_bg}
+foreground = ${colors.bar_fg_f}
 
 bottom = false
 
-border-top-color = ${colors.tp}
-border-left-color = ${colors.tp}
-border-right-color = ${colors.tp}
-border-top-size = 0
-border-left-size = 0
-border-right-size = 0
+; border-top-color = ${colors.tp}
+; border-left-color = ${colors.tp}
+; border-right-color = ${colors.tp}
+; border-top-size = 0
+; border-left-size = 0
+; border-right-size = 0
 
 module-margin-left = 0
 module-margin-right = 0
-padding-left = 0
-padding-right = 0
+padding-left = 2
+padding-right = 2
 
-font-0 = Inconsolata:pixelsize=13;3
-font-1 = Font Awesome 5 Free:pixelsize=11;3
+font-0 = "Inconsolata:pixelsize=11;3"
+font-1 = "Font Awesome 5 Brands:pixelsize=11;3"
+font-2 = "Font Awesome 5 Brands Regular:pixelsize=11;3"
+font-3 = "Font Awesome 5 Free:pixelsize=11;3"
+font-4 = "Font Awesome 5 Free Solid:pixelsize=11;3"
+font-5 = "Font Awesome 5 Free Regular:pixelsize=11;3"
 
 fixed-center = true
 
-modules-left = i3 xwindow
+; modules-left = i3 xwindow
+modules-left = i3
 modules-center = time
-modules-right = volume battery wlan wired-network cpu memory temperature
+modules-right = wired-network cpu memory temperature
 
 wm-restack = i3
 
-tray-position = right
-tray-background = ${colors.bgtray}
+; tray-position = right
+; tray-background = ${colors.bgtray}
 
 [module/i3]
 type = internal/i3
@@ -70,11 +75,13 @@ label-mode-foreground = ${colors.fg}
 label-mode-background = ${colors.alert}
 
 label-focused = %icon%
-label-focused-background = ${colors.bgi3f}
+; label-focused-background = ${colors.bgi3f}
+label-focused-foreground = ${colors.bar_fg_f}
 label-focused-padding = 1
 
 label-unfocused = %icon%
-label-unfocused-background = ${colors.bgi3}
+; label-unfocused-background = ${colors.bgi3}
+label-unfocused-foreground = ${colors.bar_fg_nf}
 label-unfocused-padding = 1
 
 label-urgent = %icon%
@@ -97,11 +104,12 @@ format-background = ${colors.bgi3f}
 type = internal/date
 interval = 1
 
-time = "%d %h %Y    %l:%M:%S %p"
+time = "%d %h %Y  |  %l:%M:%S %p"
 format-prefix = " "
 format-suffix = " "
 
-format-background = ${colors.bgtime}
+; format-background = ${colors.bgtime}
+format-foreground = ${colors.bar_fg_f}
 
 label = %time%
 format-margin = 1
@@ -112,7 +120,7 @@ type = custom/script
 tail = true
 format-prefix = " "
 format-suffix = " "
-label = VOL %output%
+label = "VOL %output%"
 exec = ~/.config/polybar/scripts/pavolume.sh --listen
 click-right = exec pavucontrol
 click-left = ~/.config/polybar/scripts/pavolume.sh --togmute
@@ -121,54 +129,23 @@ scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
 format-foreground = ${colors.fg}
 format-background = ${colors.bgcoreinfo}
 
-[module/battery]
-type = internal/battery
-battery = BAT1
-adapter = ADP0
-full-at = 99
-
-format-full = <label-full>
-format-charging = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
-
-ramp-capacity-0 = "  "
-ramp-capacity-1 = " ."
-ramp-capacity-2 = " :"
-ramp-capacity-3 = " ;"
-ramp-capacity-4 = " !"
-
-animation-charging-0 = "  "
-animation-charging-1 = " ."
-animation-charging-2 = " :"
-animation-charging-3 = " ;"
-animation-charging-4 = " !"
-animation-charging-framerate = 750
-
-label-full = "FUL %percentage%%  "
-label-charging = "CGH %percentage%%  "
-label-discharging = "BAT %percentage%%  "
-
-format-charging-background = ${colors.bgcoreinfo}
-format-discharging-background = ${colors.bgcoreinfo}
-format-full-background = ${colors.bgcoreinfo}
-
 [module/cpu]
 type = internal/cpu
 interval = 2
 format-prefix = " "
 format-suffix = " "
-format-prefix-foreground = ${colors.fg}
-format-background = ${colors.bgcoreinfo}
-label = "CPU %percentage%%"
+format-prefix-foreground = ${colors.bar_fg_nf}
+; format-background = ${colors.bgcoreinfo}
+label = " %percentage%%"
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = " "
 format-suffix = " "
-format-prefix-foreground = ${colors.fg}
-format-background = ${colors.bgcoreinfo}
-label = "MEM %percentage_used%%"
+format-prefix-foreground = ${colors.bar_fg_nf}
+; format-background = ${colors.bgcoreinfo}
+label = " %percentage_used%%"
 
 [module/temperature]
 type = internal/temperature
@@ -235,3 +212,6 @@ format-connected-prefix-background = ${colors.bg}
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${colors.alert}
 label-disconnected-foreground = ${colors.foreground}
+
+; vim:set ft=dosini:
+

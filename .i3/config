@@ -424,7 +424,7 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-exec_always --no-startup-id feh --bg-fill ~/Pictures/city.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh
 exec_always --no-startup-id picom -b
 

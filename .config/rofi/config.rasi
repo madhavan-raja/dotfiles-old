@@ -1,0 +1,9 @@
+configuration {
+  font: "Fira Code 14";
+  padding: 60;
+  line-margin: 2;
+  color-window: "#0f0f0f, #0f0f0f, #0f0f0f";
+	color-normal: "#0f0f0f, #888888, #0f0f0f, #0f0f0f, #ffffff";
+	// color-active: "#0f0f0f, #b1b4b3, #222222, #007763, #b1b4b3";
+	// color-urgent: "#0f0f0f, #b1b4b3, #222222, #77003d, #b1b4b3";
+}

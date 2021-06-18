@@ -100,4 +100,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias prep="python ~/Repositories/prepcppy/prep.py"
+alias prep="python ~/Repositories/prepcp/prep.py"

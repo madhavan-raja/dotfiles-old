@@ -6,3 +6,5 @@ Clone using:
 ```
 git clone https://github.com/madhavan-raja/dotfiles.git .dotfiles
 ```
+
+Disable USB Autosuspend

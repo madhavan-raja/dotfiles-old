@@ -2,7 +2,7 @@
 
 My Linux i3 configurations files.
 
-Clone using:
+Clone using
 ```
 git clone https://github.com/madhavan-raja/dotfiles.git .dotfiles
 ```

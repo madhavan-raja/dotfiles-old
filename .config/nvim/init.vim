@@ -19,6 +19,7 @@ set nobackup " No auto backups
 set noswapfile " No swap
 set t_Co=256 " Set if term supports 256 colors.
 set number " Display line numbers
+set rnu " Use relative line numbering
 set clipboard=unnamedplus " Copy/paste between vim and other programs.
 syntax enable
 let g:rehash256 = 1

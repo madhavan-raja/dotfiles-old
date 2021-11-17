@@ -76,6 +76,10 @@ color desert
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Gray40
 
+set wrap
+set linebreak
+set breakindent
+
 set autochdir
 noremap <f9> :!make<CR>
 

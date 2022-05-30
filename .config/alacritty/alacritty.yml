@@ -1,8 +1,16 @@
 font:
   normal:
-    family: Fira Code
+    family: Iosevka
   size: 11
 
 colors:
   primary:
     background: '#0f0f0f'
+
+shell:
+  program: wsl
+
+window:
+  padding:
+    x: 10
+    y: 10

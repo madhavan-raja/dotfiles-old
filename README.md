@@ -1,6 +1,6 @@
 # Dotfiles
 
-My Linux i3, Neovim and Emacs configurations files.
+Linux i3, Neovim and Emacs configurations files.
 
 Clone using:
 ```

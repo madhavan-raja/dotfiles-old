@@ -1,4 +1,4 @@
-Xft.dpi:       96
+Xft.dpi:       130
 Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
@@ -9,7 +9,7 @@ Xft.lcdfilter: lcddefault
 XTerm*background:        #0F0F0F
 XTerm*foreground:        #FFFFFF
 XTerm*pointerColor:      #888888
-XTerm*faceName:          Fira Code
+XTerm*faceName:          Iosevka
 XTerm*faceSize:          13
 XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
@@ -59,14 +59,8 @@ Xcursor.size:                     0
 
 URxvt:                            9x15
 
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.hintstyle:  hintfull
-
-URxvt.font: "xft:FiraCode:pixelsize=13"
-URxvt.boldfont: "xft:FiraCode-Bold:pixelsize=13"
+URxvt.font: "xft:Iosevka:pixelsize=13"
+URxvt.boldfont: "xft:Iosevka-Bold:pixelsize=13"
 
 ! alternative font settings with 'terminus':
 ! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
